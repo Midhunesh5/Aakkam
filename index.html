@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aakkam School of Craft - Crafting Heritage. Inspiring the Future.</title>
+<meta name="description" content="Aakkam School of Craft preserves India's rich artisanal heritage while empowering a new generation of craftspeople. Explore traditional crafts, workshops, and textile tours in Tamil Nadu.">
+<meta name="keywords" content="craft school, traditional crafts, Indian handicrafts, textile tours, weaving, pottery, Tamil Nadu crafts, heritage preservation">
+<meta name="author" content="Aakkam School of Craft">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aakkamschoolofcraft.com/">
+<meta property="og:title" content="Aakkam School of Craft - Crafting Heritage. Inspiring the Future.">
+<meta property="og:description" content="Preserving India's rich artisanal heritage while empowering a new generation of craftspeople to innovate and thrive.">
+<meta property="og:image" content="assets/logo.jpg">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://aakkamschoolofcraft.com/">
+<meta property="twitter:title" content="Aakkam School of Craft - Crafting Heritage. Inspiring the Future.">
+<meta property="twitter:description" content="Preserving India's rich artisanal heritage while empowering a new generation of craftspeople to innovate and thrive.">
+<meta property="twitter:image" content="assets/logo.jpg">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Aakkam School of Craft",
+  "description": "Preserving India's rich artisanal heritage while empowering a new generation of craftspeople to innovate and thrive in the contemporary world.",
+  "url": "https://aakkamschoolofcraft.com",
+  "logo": "assets/logo.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.facebook.com/aakkamschoolofcraft",
+    "https://www.instagram.com/aakkamschoolofcraft",
+    "https://www.twitter.com/aakkamschoolofcraft",
+    "https://www.youtube.com/aakkamschoolofcraft"
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2B4457',
+secondary: '#6B8DA3'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+html {
+scroll-behavior: smooth;
+}
+.hero-text {
+text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+/* Skip to main content link */
+.skip-link {
+position: absolute;
+top: -40px;
+left: 0;
+background: #2B4457;
+color: white;
+padding: 8px 16px;
+text-decoration: none;
+z-index: 100;
+}
+.skip-link:focus {
+top: 0;
+}
+/* Loading spinner */
+.loading-spinner {
+border: 3px solid rgba(43, 68, 87, 0.1);
+border-top: 3px solid #2B4457;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+animation: spin 1s linear infinite;
+margin: 20px auto;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+/* Fade-in animation */
+.fade-in {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+/* Back to top button */
+.back-to-top {
+position: fixed;
+bottom: 30px;
+right: 30px;
+width: 50px;
+height: 50px;
+background: linear-gradient(135deg, #CC5500, #E07A3B);
+color: white;
+border: none;
+border-radius: 50%;
+cursor: pointer;
+display: none;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 15px rgba(204, 85, 0, 0.3);
+transition: all 0.3s ease;
+z-index: 1000;
+}
+.back-to-top:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 20px rgba(204, 85, 0, 0.4);
+}
+.back-to-top.visible {
+display: flex;
+}
+/* Image lightbox */
+.lightbox {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.95);
+z-index: 2000;
+align-items: center;
+justify-content: center;
+}
+.lightbox.active {
+display: flex;
+}
+.lightbox img {
+max-width: 90%;
+max-height: 90%;
+object-fit: contain;
+}
+.lightbox-close {
+position: absolute;
+top: 20px;
+right: 30px;
+color: white;
+font-size: 40px;
+cursor: pointer;
+background: none;
+border: none;
+}
+.lightbox-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+color: white;
+font-size: 30px;
+cursor: pointer;
+background: rgba(255, 255, 255, 0.2);
+border: none;
+padding: 10px 15px;
+border-radius: 50%;
+}
+.lightbox-prev {
+left: 30px;
+}
+.lightbox-next {
+right: 30px;
+}
+.lightbox-counter {
+position: absolute;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%);
+color: white;
+font-size: 18px;
+}
+/* Mobile menu */
+.mobile-menu {
+position: fixed;
+top: 0;
+right: -100%;
+width: 300px;
+height: 100vh;
+background: white;
+box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+transition: right 0.3s ease;
+z-index: 1500;
+overflow-y: auto;
+}
+.mobile-menu.active {
+right: 0;
+}
+.mobile-menu-overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+z-index: 1400;
+}
+.mobile-menu-overlay.active {
+display: block;
+}
+/* Progress bar */
+.progress-bar {
+position: fixed;
+top: 0;
+left: 0;
+height: 3px;
+background: linear-gradient(90deg, #CC5500, #E07A3B);
+z-index: 2000;
+transition: width 0.1s ease;
+}
+/* Parallax */
+.parallax {
+will-change: transform;
+}
+/* Button ripple effect */
+.ripple {
+position: relative;
+overflow: hidden;
+}
+.ripple::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.5);
+transform: translate(-50%, -50%);
+transition: width 0.6s, height 0.6s;
+}
+.ripple:active::after {
+width: 300px;
+height: 300px;
+}
+/* Focus visible */
+*:focus-visible {
+outline: 2px solid #CC5500;
+outline-offset: 2px;
+}
+/* Form error styles */
+input.error, textarea.error, select.error {
+border-color: #ef4444 !important;
+}
+.error-message {
+color: #ef4444;
+font-size: 0.875rem;
+margin-top: 0.25rem;
+}
+/* Ensure home section is visible by default, but allow it to be hidden for navigation */
+#home.page-section:not(.hidden) {
+display: block;
+visibility: visible;
+opacity: 1;
+}
+/* Prevent other sections from showing when they shouldn't */
+.page-section.hidden {
+display: none !important;
+}
+.craft-texture {
+background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><defs><pattern id="weave" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="%23faf7f0"/><rect x="0" y="0" width="10" height="10" fill="%23f5f1e8"/><rect x="10" y="10" width="10" height="10" fill="%23f5f1e8"/></pattern></defs><rect width="60" height="60" fill="url(%23weave)"/></svg>');
+}
+.art-collage-card {
+position: relative;
+border-radius: 2.5rem;
+box-shadow: 0 20px 45px rgba(43, 68, 87, 0.18);
+display: block;
+visibility: visible;
+opacity: 1;
+overflow: hidden;
+transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.art-collage-card::before {
+content: '';
+position: absolute;
+inset: 18px;
+border: 1px dashed rgba(193, 154, 107, 0.45);
+border-radius: 2rem;
+pointer-events: none;
+transform: rotate(-1deg);
+opacity: 0.7;
+}
+.art-collage-card:hover {
+transform: translateY(-12px) rotate(-0.6deg);
+box-shadow: 0 30px 60px rgba(204, 85, 0, 0.22);
+}
+.art-pill {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+padding: 0.45rem 1.5rem;
+border-radius: 999px;
+letter-spacing: 0.35em;
+font-size: 0.65rem;
+text-transform: uppercase;
+background: rgba(204, 85, 0, 0.1);
+color: #9E5B2D;
+}
+.collage-compact {
+border-radius: 1.75rem;
+}
+.collage-compact::before {
+inset: 14px;
+border-radius: 1.25rem;
+}
+.collage-grid {
+display: grid;
+gap: 2rem;
+}
+.collage-detail-grid {
+display: grid;
+gap: 1.5rem;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.tape-accent {
+position: relative;
+}
+.tape-accent::after {
+content: '';
+position: absolute;
+top: -12px;
+left: 40px;
+width: 120px;
+height: 28px;
+background: rgba(255, 255, 255, 0.5);
+transform: rotate(-4deg);
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+border-radius: 6px;
+}
+.gallery-tab {
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
+border-radius: 1.5rem;
+transition: all 0.3s ease;
+border-width: 1px;
+border-style: solid;
+}
+.gallery-tab-icon {
+width: 2.5rem;
+height: 2.5rem;
+border-radius: 0.9rem;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+transition: all 0.3s ease;
+}
+.gallery-tab--active {
+background-color: #2B2B2B;
+color: #FFFFFF;
+border-color: transparent;
+box-shadow: 0 20px 45px rgba(33, 37, 41, 0.35);
+}
+.gallery-tab--active .gallery-tab-icon {
+background-color: rgba(255, 255, 255, 0.18);
+color: #FFFFFF;
+}
+.gallery-tab--inactive {
+background-color: rgba(255, 255, 255, 0.95);
+color: rgba(43, 43, 43, 0.75);
+border-color: rgba(43, 68, 87, 0.08);
+box-shadow: 0 15px 35px rgba(43, 68, 87, 0.08);
+}
+.gallery-tab--inactive:hover {
+border-color: rgba(43, 68, 87, 0.3);
+}
+.gallery-tab--inactive .gallery-tab-icon {
+background-color: rgba(43, 68, 87, 0.08);
+color: #2B2B2B;
+}
+</style>
+</head>
+<body class="bg-[#FAF7F0] text-[#2B2B2B] font-['Inter']">
+<!-- Skip to main content -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<!-- Progress bar -->
+<div class="progress-bar" id="progress-bar"></div>
+<!-- Back to top button -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+<i class="ri-arrow-up-line text-xl"></i>
+</button>
+<!-- Mobile menu overlay -->
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+<div class="p-6">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center space-x-3">
+<img src="assets/logo.jpg" alt="Aakkam logo" loading="eager" class="w-10 h-10 rounded-xl border border-[#CC5500]/30 object-cover">
+<div>
+<div class="text-2xl font-['Playfair_Display'] font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#CC5500] via-[#E07A3B] to-[#2B4457]">Aakkam</div>
+<p class="text-[10px] tracking-[0.5em] uppercase text-[#2B2B2B]/70">School Of Crafts</p>
+</div>
+</div>
+<button class="mobile-menu-close w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors" id="mobile-menu-close" aria-label="Close menu">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<nav class="flex flex-col space-y-4">
+<a href="#" data-page="home" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-3 border-b border-gray-200">Home</a>
+<a href="#" data-page="about" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-3 border-b border-gray-200">About</a>
+<button id="mobile-works-toggle" aria-expanded="false" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-3 border-b border-gray-200 flex items-center justify-between">Works <i class="ri-arrow-down-s-line"></i></button>
+<div id="mobile-works-submenu" class="hidden ml-4 mt-2 space-y-2">
+<a href="#" data-page="gallery" data-tab="workshops" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-2">Workshops</a>
+<a href="#" data-page="gallery" data-tab="events" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-2">Experiences</a>
+</div>
+<a href="#" data-page="team" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-3 border-b border-gray-200">Team</a>
+<a href="#" data-page="contact" class="nav-link-mobile text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium py-3">Contact</a>
+</nav>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#C19A6B]/10 shadow-sm">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<img src="assets/logo.jpg" alt="Aakkam logo" loading="eager" class="w-12 h-12 rounded-2xl border border-[#CC5500]/30 object-cover">
+<div>
+<div class="text-3xl font-['Playfair_Display'] font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#CC5500] via-[#E07A3B] to-[#2B4457]">Aakkam</div>
+<p class="text-[11px] tracking-[0.6em] uppercase text-[#2B2B2B]/70 mt-1">School Of Crafts</p>
+</div>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" data-page="home" class="nav-link text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium cursor-pointer">Home</a>
+<a href="#" data-page="about" class="nav-link text-primary font-medium cursor-pointer">About</a>
+<div class="relative group">
+<button data-page="gallery" aria-haspopup="true" aria-expanded="false" class="nav-link text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-[#faf7f0]">Works <i class="ri-arrow-down-s-line group-hover:rotate-180 transition-transform duration-300"></i></button>
+<div class="absolute right-0 mt-1 w-56 bg-white border-2 border-[#CC5500]/20 rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-300 overflow-hidden z-30">
+<div class="py-2">
+<a href="#" data-page="gallery" data-tab="workshops" class="nav-link block px-6 py-3 text-sm font-medium text-[#2B2B2B] hover:bg-gradient-to-r hover:from-[#CC5500]/5 hover:to-primary/5 hover:text-primary border-l-4 border-l-transparent hover:border-l-[#CC5500] transition-all duration-200">Workshops</a>
+<a href="#" data-page="gallery" data-tab="events" class="nav-link block px-6 py-3 text-sm font-medium text-[#2B2B2B] hover:bg-gradient-to-r hover:from-[#CC5500]/5 hover:to-primary/5 hover:text-primary border-l-4 border-l-transparent hover:border-l-[#CC5500] transition-all duration-200">Experiences</a>
+</div>
+</div>
+</div>
+<a href="#" data-page="team" class="nav-link text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium cursor-pointer">Team</a>
+<a href="#" data-page="contact" class="nav-link text-[#2B2B2B] hover:text-primary transition-all duration-300 font-medium cursor-pointer">Contact</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary/10 transition-colors cursor-pointer" id="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+<i class="ri-menu-line text-lg"></i>
+</button>
+</div>
+</div>
+</nav>
+<!-- Image Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox" aria-modal="true">
+<button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+<i class="ri-close-line"></i>
+</button>
+<button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+<i class="ri-arrow-left-line"></i>
+</button>
+<img id="lightbox-image" src="" alt="">
+<button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
+<i class="ri-arrow-right-line"></i>
+</button>
+<div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+<!-- Hero Section -->
+<section id="home" class="page-section">
+<main id="main-content">
+<!-- Main Hero -->
+<div class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style="background-image: url('assets/home/Home.jpg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-br from-[#2B2B2B]/70 via-transparent to-primary/20"></div>
+<div class="relative z-10 text-center px-6 max-w-6xl mx-auto">
+<div class="mb-8">
+<span class="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+Vanavarayar Foundation
+</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-['Playfair_Display'] font-bold text-white hero-text mb-8 leading-tight">
+Crafting
+<span class="text-[#CC5500]">Legacy</span>
+</h1>
+<p class="text-lg md:text-xl text-white/90 hero-text mb-12 font-['Playfair_Display'] font-light max-w-3xl mx-auto leading-relaxed tracking-wide"> Become part of a learning community where traditional knowledge blends with contemporary practice. At Aakkam, you work with ideas that come from lived experience and grow into skills that can serve the present.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 !rounded-button text-lg font-medium transition-all duration-300 whitespace-nowrap border border-white/30 cursor-pointer ripple" data-redirect="about" aria-label="Explore our crafts and programs">
+Explore Crafts
+</button>
+</div>
+</div>
+</div>
+<!-- Inspiration Quote Section -->
+<div class="py-32 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #FAF7F0 0%, #F5F1E8 100%);">
+<div class="absolute inset-0 opacity-5">
+<div class="absolute top-10 left-10 w-32 h-32 border-2 border-primary rounded-full"></div>
+<div class="absolute bottom-20 right-20 w-24 h-24 border-2 border-secondary rounded-full"></div>
+<div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/10 rotate-45"></div>
+</div>
+<div class="max-w-5xl mx-auto text-center relative z-10">
+<div class="mb-8">
+<div class="w-16 h-1 bg-primary mx-auto mb-4"></div>
+<span class="text-secondary text-sm font-medium uppercase tracking-widest">Quote</span>
+</div>
+<blockquote class="text-4xl md:text-5xl font-['Playfair_Display'] font-light text-[#2B2B2B] mb-8 leading-relaxed">
+"In a gentle way, you can shake the world."
+</blockquote>
+<div class="flex items-center justify-center space-x-4">
+<div class="w-12 h-px bg-primary/30"></div>
+<cite class="text-lg text-[#2B2B2B]/70 font-medium not-italic">Mahatma Gandhi</cite>
+<div class="w-12 h-px bg-primary/30"></div>
+</div>
+</div>
+</div>
+<!-- Craft Categories Preview -->
+<div class="py-40 px-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-[#FEFEFE] via-[#FDFDFD] to-[#FBFBFB]"></div>
+<div class="max-w-6xl mx-auto relative z-10">
+<div class="text-center mb-32">
+<div class="inline-block mb-12">
+<span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-lg font-medium tracking-widest uppercase">Heritage Crafts Collection</span>
+</div>
+<h2 class="text-5xl md:text-6xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-8 leading-tight">
+Discover India's
+<span class="text-primary italic relative">
+Living
+<div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#CC5500]/40 to-transparent rounded-full"></div>
+</span>
+Treasures
+</h2>
+<p class="text-xl text-[#2B2B2B]/70 max-w-2xl mx-auto leading-relaxed">
+  India’s craft traditions continue to evolve through the knowledge shared by artisans across regions. Each practice carries methods shaped by lived experience and creative intent. 
+</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<article class="art-collage-card bg-white">
+<div class="h-64 overflow-hidden">
+<img src="assets/home/jamakalam.jpeg" alt="Jamakalam Weaving" class="w-full h-full object-cover object-top" loading="lazy">
+</div>
+<div class="relative z-10 p-6 space-y-3">
+<div class="text-sm text-primary font-medium">Bhavani, Tamil Nadu</div>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Jamakalam Weaving</h3>
+<p class="text-[#2B2B2B]/70 leading-relaxed">A weaving tradition from a beautiful agrarian river town, known for its vibrant hues and geometric patterns.</p>
+</div>
+</article>
+<article class="art-collage-card bg-white tape-accent">
+<div class="h-64 overflow-hidden">
+<img src="assets/home/stoles&saree.jpeg" alt="Stoles and Saree" class="w-full h-full object-cover object-top" loading="lazy">
+</div>
+<div class="relative z-10 p-6 space-y-3">
+<div class="text-sm text-secondary font-medium">Samathur Village</div>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Stoles & Sarees</h3>
+<p class="text-[#2B2B2B]/70 leading-relaxed">A textile practice nurtured in a craft-rich landscape, producing soft fabrics that carry subtle colour work and precision.</p>
+</div>
+</article>
+<article class="art-collage-card bg-white">
+<div class="h-64 overflow-hidden">
+<img src="assets/home/cotton.png" alt="Khadi Weaving" class="w-full h-full object-cover object-top" loading="lazy">
+</div>
+<div class="relative z-10 p-6 space-y-3">
+<div class="text-sm text-[#CC5500] font-medium">Gandhigram</div>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Khadi Cotton</h3>
+<p class="text-[#2B2B2B]/70 leading-relaxed"> A hand-spun and hand-woven fabric rooted in the gandhian ideology of self-reliance and dignity in work. </p>
+</div>
+</article>
+<article class="art-collage-card bg-white tape-accent">
+<div class="h-64 overflow-hidden">
+<img src="assets/home/THANJAVUR.jpeg" alt="Krafts of Thanjavur" class="w-full h-full object-cover object-top" loading="lazy">
+</div>
+<div class="relative z-10 p-6 space-y-3">
+<div class="text-sm text-primary font-medium">Thanjavur Heritage</div>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Crafts of Thanjavur</h3>
+<p class="text-[#2B2B2B]/70 leading-relaxed">Once the capital of Cholas, a region recognised for intricate metal casting and careful painting methods that reflect generations of cultural expression.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="py-32 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #A0522D 0%, #C19A6B 100%);">
+<div class="absolute inset-0 opacity-10">
+<img src="https://readdy.ai/api/search-image?query=Subtle%20pattern%20of%20traditional%20Indian%20craft%20motifs%20and%20geometric%20designs%2C%20light%20texture%20overlay%20for%20background%20use%2C%20delicate%20line%20art%20style%20with%20cultural%20symbols%2C%20minimal%20and%20elegant%20pattern%20suitable%20for%20overlay&width=1200&height=800&seq=pattern001&orientation=landscape"
+alt="Pattern" class="w-full h-full object-cover">
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-['Playfair_Display'] font-bold text-white mb-8">
+Discover Our Works
+</h2>
+<p class="text-xl text-white/90 mb-12 leading-relaxed">
+  Explore the learning pathways at Aakkam School of Crafts. Each program introduces you to methods that shape India’s craft traditions and the ways artisans adapt these methods for contemporary needs.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-4 !rounded-button text-lg font-medium transition-all duration-300 whitespace-nowrap cursor-pointer ripple" data-redirect="gallery" aria-label="View our works and gallery">
+View Our Works
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section id="about" class="page-section hidden py-20">
+<!-- Mission Introduction -->
+<div class="py-20 px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-8">
+The Sacred Dance of
+<span class="text-primary italic relative">
+Heritage
+<div class="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#CC5500] to-transparent"></div>
+</span>
+& Innovation
+</h2>
+<p class="text-lg text-[#2B2B2B]/80 leading-relaxed mb-6">
+  Anchoring Craft Education / Craft Pathways / Aakkam’s Network of Craft Practices Aakkam works with craftspeople and learners across Bhavani, Samathur, Thanjavur and Gandhigram. The school creates spaces for weaving practice, craft learning and cultural inquiry. Through meetings, workshops, product development sessions and focused displays, Aakkam enables makers, students and visitors to learn from each other and build a deeper understanding of these living traditions.</p>
+</div>
+</div>
+<!-- About Details -->
+<div class="py-20 craft-texture relative overflow-hidden">
+<div class="absolute inset-0 opacity-[0.02]">
+<div class="absolute top-20 left-10 w-64 h-64 border-2 border-primary rounded-full"></div>
+<div class="absolute bottom-32 right-20 w-48 h-48 border-2 border-secondary rounded-full"></div>
+<div class="absolute top-1/2 left-1/3 w-32 h-32 bg-primary/5 rotate-45"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-4">
+The Soul of
+<span class="text-primary italic">
+Aakkam
+</span>
+</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="relative">
+<!-- The Vision - Floating Card Style -->
+<div class="mb-32">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<div class="bg-white/95 backdrop-blur-sm rounded-[2.5rem] p-10 shadow-[0_30px_80px_rgba(43,68,87,0.12)] border border-[#CC5500]/10">
+<h3 class="text-3xl font-['Playfair_Display'] font-semibold text-primary mb-6">The Vision</h3>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed mb-6">
+  To reimagine the future of India’s arts and crafts through collaboration, creativity, and care. Rooted in communities yet open to the world, the initiative will engage in creative documentation, education, and co-creation — enabling traditions to evolve, adapt, and thrive across generations. It seeks to find ways for crafts and culture to meaningfully respond to the needs and aspirations of the present time.</p>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_rgba(43,68,87,0.15)] border-4 border-white rotate-3">
+<img src="assets/about/The Vision.JPG" alt="Craftsperson at work" class="w-full h-full object-cover object-top" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+<!-- Our Pursuit - Diagonal Overlap Style -->
+<div class="mb-32">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 lg:order-2">
+<div class="bg-white/95 backdrop-blur-sm rounded-[2.5rem] p-10 shadow-[0_30px_80px_rgba(43,68,87,0.12)] border border-[#2B4457]/10">
+<h3 class="text-3xl font-['Playfair_Display'] font-semibold text-primary mb-6">Our Pursuit</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<i class="ri-arrow-right-line text-[#CC5500] text-xl mt-1 flex-shrink-0"></i>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed">
+  Reimagine the way crafts are seen through collaboration and co-creation.
+</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="ri-arrow-right-line text-[#CC5500] text-xl mt-1 flex-shrink-0"></i>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed">
+  Bring together different disciplines to spark innovation in culture and design.
+</p>
+</div>
+<div class="flex items-start gap-3">
+<i class="ri-arrow-right-line text-[#CC5500] text-xl mt-1 flex-shrink-0"></i>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed">
+  Create learning spaces that inspire, connect communities, and nurture creativity.
+  </p>
+</div>
+<div class="flex items-start gap-3">
+<i class="ri-arrow-right-line text-[#CC5500] text-xl mt-1 flex-shrink-0"></i>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed">
+    Build meaningful and inclusive work opportunities
+    in the creative sector.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 lg:order-1">
+<div class="rounded-[2.5rem] overflow-hidden shadow-[0_35px_90px_rgba(43,68,87,0.18)] border-4 border-white -rotate-3">
+<img src="assets/about/Our Pursuit.jpg" alt="Traditional crafts collection" class="w-full h-full object-cover object-top" loading="lazy">
+</div>
+</div>
+</div>
+</div>
+<!-- Our Spirit - Centered with Floating Image -->
+<div class="relative">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<div class="bg-white/95 backdrop-blur-sm rounded-[2.5rem] p-12 shadow-[0_30px_80px_rgba(43,68,87,0.12)] border border-[#CC5500]/10">
+<h3 class="text-3xl font-['Playfair_Display'] font-semibold text-primary mb-8">Our Spirit</h3>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed mb-6">
+As patrons of our fine arts, religion,
+ philosophy, and literature, we
+ should try to promote and
+ preserve our traditional arts. Our
+ rich cultural heritage gives us
+ great joy and satisfaction
+ especially when our arts have
+ bakthi in their theme. For
+ hundreds of years our artists have
+ practised all forms of art, to
+ educate and entertain people,
+ thereby contributing to the
+ healthy living both in mind and
+ body. Art, music, and literature
+ cannot be separated, they are part
+ of us. A society is judged by its
+ cultural traditions and life is a
+ reflection and an expression of
+ different art forms.</p>
+<p class="text-lg font-['Inter'] text-[#2B2B2B]/80 leading-relaxed font-medium">
+    - Arucchelvar Dr. Mahalingam Ayya</p>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="rounded-[2.5rem] overflow-hidden shadow-[0_40px_100px_rgba(43,68,87,0.2)] border-4 border-white">
+<img src="assets/about/DR.N.M.jpg" alt="Weaving process" class="w-full h-full object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section id="gallery" class="page-section hidden py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20 pt-8">
+<h2 id="gallery-title" class="text-4xl md:text-5xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-4">
+Crafted
+<span class="text-primary italic relative">
+Symphonies
+<div class="absolute -top-4 -right-2 text-2xl text-[#CC5500]/30">✦</div>
+</span>
+In Clay & Thread
+</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+<p id="gallery-description" class="text-lg text-[#2B2B2B]/70 max-w-2xl mx-auto mb-8">
+Explore our collection of handcrafted masterpieces, each telling a unique story of tradition, innovation, and artistic excellence.
+</p>
+<!-- Internal Navigation removed: Use the top 'Works' dropdown to switch between Workshops, Experiences, and Textile Tours -->
+</div>
+<!-- Workshops Tab Content -->
+<div id="workshops-content" class="gallery-content mt-8">
+<div class="mb-12">
+<h3 class="text-3xl md:text-4xl font-['Playfair_Display'] font-semibold text-primary mb-2">Samathur Village Studio</h3>
+<div class="w-24 h-1 bg-[#CC5500] mb-8"></div>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 collage-grid">
+<article data-type="workshop" data-id="weaving-basics" class="art-collage-card bg-white cursor-pointer flex flex-col tape-accent">
+<div class="h-72 overflow-hidden">
+<img src="assets/work/workshop/weaving.jpg" alt="Weaving" class="w-full h-full object-cover object-top">
+</div>
+<div class="relative z-10 p-8 flex flex-col gap-3">
+<span class="art-pill">Loom Fundamentals</span>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Handloom Weaving Basics </h3>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Learn foundational weaving methods on traditional looms
+</p>
+</div>
+</article>
+<article data-type="workshop" data-id="botanical-printing" class="art-collage-card bg-white cursor-pointer flex flex-col">
+<div class="h-72 overflow-hidden">
+<img src="assets/work/workshop/BOTANICAL PRINTING.jpeg" alt="Botanical Printing" class="w-full h-full object-cover object-center">
+</div>
+<div class="relative z-10 p-8 flex flex-col gap-3">
+<span class="art-pill">Nature Press</span>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Botanical Printing</h3>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Explore fabric printing with natural leaves and flower impressions
+</p>
+</div>
+</article>
+<article data-type="workshop" data-id="basket-weaving" class="art-collage-card bg-white cursor-pointer flex flex-col">
+<div class="h-72 overflow-hidden">
+<img src="assets/work/workshop/koodai weaving.jpeg" alt="Koodai Weaving" class="w-full h-full object-cover object-center">
+</div>
+<div class="relative z-10 p-8 flex flex-col gap-3">
+<span class="art-pill">Fiber Craft</span>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Koodai Weaving</h3>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Understand natural-material basket making
+</p>
+</div>
+</article>
+<article data-type="workshop" data-id="palm-leaves-craft" class="art-collage-card bg-white cursor-pointer flex flex-col">
+<div class="h-72 overflow-hidden">
+<img src="assets/work/workshop/palm Leaves.jpg" alt="Palm Leaves Craft" class="w-full h-full object-cover object-center">
+</div>
+<div class="relative z-10 p-8 flex flex-col gap-3">
+<span class="art-pill">Leaf Atelier</span>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Palm Leaves Craft</h3>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Fold, stitch, and dye palmyra leaves into contemporary lighting and wearable art.</p>
+</div>
+</article>
+<article data-type="workshop" data-id="natural-dyeing-weaving" class="art-collage-card bg-white cursor-pointer flex flex-col tape-accent">
+<div class="h-72 overflow-hidden">
+<img src="assets/work/workshop/NATURAL DYEING.jpg" alt="Natural Dyeing" class="w-full h-full object-cover object-center">
+</div>
+<div class="relative z-10 p-8 flex flex-col gap-3">
+<span class="art-pill">Slow Color</span>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Natural Dyeing</h3>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Work with plant-based dyes and woven fabric</p>
+</div>
+</article>
+</div>
+</div>
+<!-- Events Tab Content -->
+<div id="events-content" class="gallery-content hidden mt-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl md:text-5xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-4">We Offer Tour And Experience</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<article data-type="event" data-id="samathur-experience" class="art-collage-card collage-compact bg-white cursor-pointer flex flex-col">
+<div class="h-48 overflow-hidden">
+<img src="assets/work/experience/samathur/Samathur.JPG" alt="Samathur Heritage" class="w-full h-full object-cover object-center" loading="eager">
+</div>
+<div class="relative z-10 p-4 flex flex-col gap-2">
+<span class="art-pill text-xs">Immersive Residency</span>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Samathur Heritage</h3>
+<p class="text-[#2B2B2B]/70 text-xs leading-relaxed">Authentic Village textile tour with generational weavers of Samathur and hands-on loom immersions with resident masters.</p>
+</div>
+</article>
+<article data-type="event" data-id="bhavani-experience" class="art-collage-card collage-compact bg-white cursor-pointer flex flex-col">
+<div class="h-48 overflow-hidden">
+<img src="assets/work/experience/bhavani/1.jpg" alt="Bhavani Evenings" class="w-full h-full object-cover object-center" loading="eager">
+</div>
+<div class="relative z-10 p-4 flex flex-col gap-2">
+<span class="art-pill text-xs">Jamakkalam Sessions</span>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Bhavani Evenings</h3>
+<p class="text-[#2B2B2B]/70 text-xs leading-relaxed">Discover the famous Jamakkalam weaving traditions from Bhavani, the Carpet city.</p>
+</div>
+</article>
+<article data-type="event" data-id="thanjavur-experience" class="art-collage-card collage-compact bg-white cursor-pointer flex flex-col">
+<div class="h-48 overflow-hidden">
+<img src="assets/work/experience/thanj/thanjavur.jpg" alt="Thanjavur Heritage" class="w-full h-full object-cover object-center" loading="eager">
+</div>
+<div class="relative z-10 p-4 flex flex-col gap-2">
+<span class="art-pill text-xs">Bronze & Brocade</span>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Thanjavur Heritage</h3>
+<p class="text-[#2B2B2B]/70 text-xs leading-relaxed">Explore heritage textile traditions and temple crafts of the Chola's old capital, Thanjavur.</p>
+</div>
+</article>
+</div>
+</div>
+<!-- Textile Tours Tab Content -->
+<div id="textile-tours-content" class="gallery-content hidden mt-8">
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-12 pt-4">
+<article data-type="tour" data-id="samathur-textile-tour" class="art-collage-card collage-compact bg-white lg:col-span-4 cursor-pointer flex flex-col">
+<div class="relative h-[320px] overflow-hidden">
+<img src="assets/work/textile tour/samathur/Samathur.JPG" alt="Samathur Textile Tour" class="w-full h-full object-cover object-center" loading="eager">
+<span class="art-pill absolute top-6 left-6 bg-[#CC5500]/90 text-white px-5 py-2 tracking-[0.35em]">Weave Trail</span>
+</div>
+<div class="relative z-10 p-6 flex flex-col gap-3">
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Samathur</h3>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Authentic Village textile tour with generational weavers of Samathur and hands-on loom immersions with resident masters.</p>
+<div class="flex flex-wrap gap-3 text-xs uppercase tracking-[0.35em] text-[#9E5B2D]">
+<span>Natural Dye Lab</span>
+<span>Loom Reset</span>
+<span>Folk Circles</span>
+</div>
+</div>
+</article>
+<div class="lg:col-span-8 grid md:grid-cols-2 gap-6">
+<article data-type="tour" data-id="bhavani-textile-tour" class="art-collage-card collage-compact bg-[#FDF8F1] border border-[#C19A6B]/30 p-6 flex flex-col gap-4 shadow-[0_25px_60px_rgba(43,68,87,0.08)] cursor-pointer hover:-translate-y-3 hover:rotate-1 hover:shadow-[0_40px_90px_rgba(204,85,0,0.25)] transition-all duration-500">
+<div class="flex items-center gap-4">
+<img src="assets/work/textile tour/bhavani/1.jpg" alt="Bhavani Jamakkalam Tour" class="w-24 h-28 rounded-[1.5rem] object-cover border-4 border-white shadow-xl">
+<div>
+<p class="text-xs uppercase tracking-[0.4em] text-secondary">Jamakkalam Route</p>
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Bhavani River Looms</h3>
+</div>
+</div>
+<p class="text-[#2B2B2B]/70 text-sm leading-relaxed">Discover the famous Jamakkalam weaving traditions from Bhavani, the Carpet city.
+  <div class="flex gap-3 text-xs uppercase tracking-[0.3em] text-[#9E5B2D]">
+<span>Pattern Lab</span>
+<span>River Walk</span>
+</div>
+</article>
+<article data-type="tour" data-id="thanjavur-textile-tour" class="art-collage-card collage-compact relative overflow-hidden shadow-[0_35px_90px_rgba(33,37,41,0.45)] cursor-pointer">
+<img src="assets/work/textile tour/thanj/THANJAVUR.jpeg" alt="Thanjavur Textile Tour" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-10 text-white flex flex-col gap-4">
+<p class="text-xs uppercase tracking-[0.45em] text-white/80">Temple Fibers</p>
+<h3 class="text-3xl font-['Playfair_Display'] font-semibold">Thanjavur Bronze & Brocade</h3>
+  <p class="text-sm text-white/80 leading-relaxed">Explore heritage textile traditions and temple crafts of the Chola’s old capital, Thanjavur
+  </p>
+  </div>
+</article>
+</div>
+</section>
+<!-- Workshop Detail Page -->
+<section id="workshop-detail" class="page-section hidden py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-6">
+<button class="back-to-gallery group flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-primary/20 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-white/20 transition-colors">
+<i class="ri-arrow-left-line text-primary group-hover:text-white transition-colors"></i>
+</div>
+<span class="font-medium text-[#2B2B2B] group-hover:text-white transition-colors">Back to Gallery</span>
+</button>
+</div>
+<div id="workshop-content"></div>
+</div>
+</section>
+<!-- Event Detail Page -->
+<section id="event-detail" class="page-section hidden py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-6">
+<button class="back-to-gallery group flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-primary/20 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-white/20 transition-colors">
+<i class="ri-arrow-left-line text-primary group-hover:text-white transition-colors"></i>
+</div>
+<span class="font-medium text-[#2B2B2B] group-hover:text-white transition-colors">Back to Gallery</span>
+</button>
+</div>
+<div id="event-content"></div>
+</div>
+</section>
+<!-- Tour Detail Page -->
+<section id="tour-detail" class="page-section hidden py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-6">
+<button class="back-to-gallery group flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg border border-primary/20 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 group-hover:bg-white/20 transition-colors">
+<i class="ri-arrow-left-line text-primary group-hover:text-white transition-colors"></i>
+</div>
+<span class="font-medium text-[#2B2B2B] group-hover:text-white transition-colors">Back to Gallery</span>
+</button>
+</div>
+<div id="tour-content"></div>
+</div>
+</section>
+<!-- Team Section -->
+<section id="team" class="page-section hidden py-20">
+<!-- Team Members -->
+<div class="py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-4">
+The
+<span class="text-primary italic relative">
+Makers
+</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+<p class="text-lg text-[#2B2B2B]/70 max-w-2xl mx-auto">
+Meet our talented community of master craftspeople, artists, and creative minds who make Aakkam a vibrant center of traditional arts.
+</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Diya" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Diya</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Evelyn" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Evelyn</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Felicia" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Felicia</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Inian" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Inian</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Kisore" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Kisore</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Midhunesh" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Midhunesh</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Paramguru" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Paramguru</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Pavan" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Pavan</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Poongudi" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Poongudi</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Prasad" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Prasad</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Sukanya" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Sukanya</h3>
+</div>
+<div class="text-center group">
+<div class="relative mb-6">
+<div class="w-32 h-32 mx-auto rounded-full border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-300 overflow-hidden">
+<img src="assets/team/Sample.png"
+alt="Surya" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<h3 class="text-lg font-['Playfair_Display'] font-semibold text-[#2B2B2B]">Surya</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="page-section hidden py-20">
+<!-- Contact Header -->
+<div class="py-20 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #FAF7F0 0%, #F5F1E8 100%);">
+<div class="absolute inset-0 opacity-5">
+<div class="absolute top-10 left-10 w-32 h-32 border-2 border-primary rounded-full"></div>
+<div class="absolute bottom-20 right-20 w-24 h-24 border-2 border-secondary rounded-full"></div>
+<div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/10 rotate-45"></div>
+</div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-6">
+Weave Your
+<span class="text-primary italic relative">
+Story
+<div class="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#CC5500]/20 via-[#CC5500] to-[#CC5500]/20 rounded-full"></div>
+</span>
+Into Ours
+</h2>
+<p class="text-xl text-[#2B2B2B]/70 mb-12 leading-relaxed">
+Ready to embark on your crafting journey? Connect with us and discover how tradition can transform your creative expression.
+</p>
+</div>
+</div>
+<!-- Contact Information -->
+<div class="py-20 px-6">
+<div class="max-w-6xl mx-auto">
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Contact Information Card -->
+<div class="bg-white rounded-2xl shadow-lg p-8">
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B] mb-8">Visit Our Center</h3>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full flex-shrink-0">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-[#2B2B2B] mb-1">Main Campus</h4>
+<p class="text-[#2B2B2B]/70">J237+GHX, Samathur - Palayur - Kurunchari - Devanurpudur Rd<br>Samathur, Tamil Nadu 642123, India</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full flex-shrink-0">
+<i class="ri-phone-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-[#2B2B2B] mb-1">Phone</h4>
+<p class="text-[#2B2B2B]/70">0422 266 1555</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full flex-shrink-0">
+<i class="ri-mail-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold text-[#2B2B2B] mb-1">Email</h4>
+<p class="text-[#2B2B2B]/70">info@aakkamcraft.in<br>  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Card -->
+<div class="bg-white rounded-2xl shadow-lg p-8">
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold text-[#2B2B2B] mb-6">Find Us Here</h3>
+<div class="relative h-64 rounded-lg overflow-hidden mb-6" id="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.8!2d78.5744!3d11.0922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf5e8f5e8f5e9%3A0x0!2sAakkam%20School%20of%20Craft!5e0!3m2!1sen!2sin!4v1704600000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Aakkam School of Craft - Samathur, Tamil Nadu"></iframe>
+<div class="absolute top-4 left-4 bg-white rounded-full p-2 shadow-md z-10">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-map-pin-fill text-primary text-lg"></i>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-md z-10">
+<p class="text-sm font-semibold text-[#2B2B2B]">Aakkam School of Craft</p>
+<p class="text-xs text-[#2B2B2B]/70">Samathur, Tamil Nadu</p>
+</div>
+</div>
+<div class="text-center">
+<p class="text-[#2B2B2B]/70 text-sm mb-4">Located in the traditional craft heartland of Samathur, easily accessible via the main highway.</p>
+<button class="w-full border-2 border-primary hover:bg-primary hover:text-white text-primary px-6 py-3 !rounded-button font-medium transition-all duration-300 whitespace-nowrap">
+Get Directions
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Write to Us Section -->
+<div class="py-16 px-6 bg-gradient-to-br from-primary/5 via-transparent to-[#CC5500]/5">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-8">
+<h2 class="text-3xl md:text-4xl font-['Playfair_Display'] font-semibold text-[#2B2B2B] mb-3">Write to Us</h2>
+<p class="text-[#2B2B2B]/70 max-w-2xl mx-auto">Have a question or collaboration idea? Send us a message and we'll respond promptly.</p>
+</div>
+<div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+<form class="space-y-4" id="write-to-us-form">
+<div class="grid md:grid-cols-2 gap-4">
+<input type="text" placeholder="Your Name *" required class="px-4 py-2.5 border border-[#C19A6B]/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 bg-[#faf7f0] text-sm">
+<input type="email" placeholder="Email Address *" required class="px-4 py-2.5 border border-[#C19A6B]/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 bg-[#faf7f0] text-sm">
+</div>
+<div class="grid md:grid-cols-2 gap-4">
+<input type="tel" placeholder="Phone Number" class="px-4 py-2.5 border border-[#C19A6B]/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 bg-[#faf7f0] text-sm">
+<input type="text" placeholder="Subject *" required class="px-4 py-2.5 border border-[#C19A6B]/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 bg-[#faf7f0] text-sm">
+</div>
+<textarea placeholder="Your Message *" rows="4" required class="w-full px-4 py-2.5 border border-[#C19A6B]/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all duration-200 bg-[#faf7f0] text-sm resize-none"></textarea>
+<div class="flex items-center gap-2">
+<input type="checkbox" id="privacy-agree" required class="w-4 h-4 rounded border-[#C19A6B]/30 accent-primary cursor-pointer">
+<label for="privacy-agree" class="text-xs text-[#2B2B2B]/70">I agree to the privacy policy</label>
+</div>
+<button type="submit" class="w-full bg-gradient-to-r from-primary to-[#2B6B8F] hover:from-primary hover:to-[#1e4d66] text-white font-semibold py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-sm">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gradient-to-b from-[#2B2B2B] to-[#1A1A1A] text-white py-12 relative overflow-hidden">
+<div class="absolute inset-0 opacity-5">
+<div class="absolute top-0 left-1/4 w-24 h-24 border border-primary rounded-full"></div>
+<div class="absolute bottom-0 right-1/4 w-16 h-16 border border-secondary rounded-full"></div>
+</div>
+<div class="max-w-6xl mx-auto px-6 relative z-10">
+<div class="text-center mb-8">
+<div class="inline-flex items-center gap-3 mb-4">
+<img src="assets/logo.jpg" alt="Aakkam logo" loading="eager" class="w-12 h-12 rounded-xl border-2 border-[#CC5500]/30 object-cover">
+<h3 class="text-2xl font-['Playfair_Display'] font-semibold bg-gradient-to-r from-white via-[#FDF4E7] to-white bg-clip-text text-transparent">
+Aakkam School of Craft
+</h3>
+</div>
+<p class="text-white/70 text-sm max-w-2xl mx-auto mb-6 leading-relaxed">
+Preserving India's rich artisanal heritage while empowering a new generation of craftspeople to innovate and thrive in the contemporary world.
+</p>
+<div class="w-24 h-px bg-gradient-to-r from-transparent via-[#CC5500]/40 to-transparent mx-auto mb-6"></div>
+<div class="flex flex-col items-center gap-4">
+<p class="text-white/60 text-xs uppercase tracking-[0.3em]">Connect With Us</p>
+<div class="flex items-center gap-4">
+<a href="#" class="group w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 cursor-pointer hover:bg-[#CC5500] hover:border-[#CC5500] hover:scale-110 transition-all duration-300" aria-label="Facebook">
+<i class="ri-facebook-fill text-lg text-white/70 group-hover:text-white transition-colors"></i>
+</a>
+<a href="#" class="group w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 cursor-pointer hover:bg-[#CC5500] hover:border-[#CC5500] hover:scale-110 transition-all duration-300" aria-label="Instagram">
+<i class="ri-instagram-line text-lg text-white/70 group-hover:text-white transition-colors"></i>
+</a>
+<a href="#" class="group w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 cursor-pointer hover:bg-[#CC5500] hover:border-[#CC5500] hover:scale-110 transition-all duration-300" aria-label="Twitter">
+<i class="ri-twitter-line text-lg text-white/70 group-hover:text-white transition-colors"></i>
+</a>
+<a href="#" class="group w-12 h-12 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 cursor-pointer hover:bg-[#CC5500] hover:border-[#CC5500] hover:scale-110 transition-all duration-300" aria-label="YouTube">
+<i class="ri-youtube-line text-lg text-white/70 group-hover:text-white transition-colors"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+// Immediate script to ensure home section is visible - run after DOM is parsed
+(function() {
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', function() {
+const homeSection = document.getElementById('home');
+if (homeSection) {
+homeSection.classList.remove('hidden');
+homeSection.style.display = 'block';
+homeSection.style.visibility = 'visible';
+homeSection.style.opacity = '1';
+}
+});
+} else {
+// DOM already loaded
+const homeSection = document.getElementById('home');
+if (homeSection) {
+homeSection.classList.remove('hidden');
+homeSection.style.display = 'block';
+homeSection.style.visibility = 'visible';
+homeSection.style.opacity = '1';
+}
+}
+})();
+</script>
+<script id="page-navigation">
+document.addEventListener('DOMContentLoaded', function() {
+const navLinks = document.querySelectorAll('.nav-link');
+const navLinksMobile = document.querySelectorAll('.nav-link-mobile');
+const pageSections = document.querySelectorAll('.page-section');
+let currentPage = 'home';
+function showPage(pageId) {
+if (!pageId) return;
+pageSections.forEach(section => {
+if (section.id === pageId) {
+section.classList.remove('hidden');
+section.style.display = 'block';
+section.style.visibility = 'visible';
+section.style.opacity = '1';
+// Remove any inline styles that might interfere
+if (section.id === 'home') {
+section.style.removeProperty('display');
+section.style.removeProperty('visibility');
+section.style.removeProperty('opacity');
+}
+} else {
+section.classList.add('hidden');
+section.style.display = 'none';
+section.style.visibility = 'hidden';
+section.style.opacity = '0';
+}
+});
+// Update desktop nav links
+navLinks.forEach(link => {
+if (link.getAttribute('data-page') === pageId) {
+link.classList.add('text-primary');
+link.classList.remove('text-[#2B2B2B]');
+} else {
+link.classList.add('text-[#2B2B2B]');
+link.classList.remove('text-primary');
+}
+});
+// Update mobile nav links
+navLinksMobile.forEach(link => {
+if (link.getAttribute('data-page') === pageId) {
+link.classList.add('text-primary');
+link.classList.remove('text-[#2B2B2B]');
+} else {
+link.classList.add('text-[#2B2B2B]');
+link.classList.remove('text-primary');
+}
+});
+if (pageId !== currentPage) {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+currentPage = pageId;
+}
+const redirectButtons = document.querySelectorAll('[data-redirect]');
+redirectButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetPage = this.getAttribute('data-redirect');
+if (targetPage) {
+showPage(targetPage);
+}
+});
+});
+// Desktop navigation
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+const pageId = this.getAttribute('data-page');
+const targetTab = this.getAttribute('data-tab');
+if (pageId) {
+e.preventDefault();
+e.stopPropagation();
+showPage(pageId);
+if (targetTab) {
+if (typeof showGalleryTab === 'function') {
+// Slight delay to ensure gallery section is visible
+setTimeout(() => showGalleryTab(targetTab), 50);
+} else {
+// Fallback: directly toggle gallery content if helper not available
+const contents = document.querySelectorAll('.gallery-content');
+contents.forEach(c => {
+if (c.id === targetTab + '-content') {
+c.classList.remove('hidden');
+c.style.opacity = '1';
+} else {
+c.classList.add('hidden');
+}
+});
+// Ensure gallery section is visible
+const gallerySection = document.getElementById('gallery');
+if (gallerySection) {
+gallerySection.classList.remove('hidden');
+gallerySection.style.display = 'block';
+gallerySection.style.visibility = 'visible';
+gallerySection.style.opacity = '1';
+}
+// Keep internal state in sync when possible
+if (typeof activeTab !== 'undefined') activeTab = targetTab;
+}
+}
+}
+});
+});
+// Mobile navigation
+navLinksMobile.forEach(link => {
+link.addEventListener('click', function(e) {
+const pageId = this.getAttribute('data-page');
+const targetTab = this.getAttribute('data-tab');
+if (pageId) {
+e.preventDefault();
+e.stopPropagation();
+showPage(pageId);
+// If this link requests a specific gallery tab, open it
+if (targetTab) {
+if (typeof showGalleryTab === 'function') {
+setTimeout(() => showGalleryTab(targetTab), 50);
+} else {
+const contents = document.querySelectorAll('.gallery-content');
+contents.forEach(c => {
+if (c.id === targetTab + '-content') {
+c.classList.remove('hidden');
+c.style.opacity = '1';
+} else {
+c.classList.add('hidden');
+}
+});
+if (typeof activeTab !== 'undefined') activeTab = targetTab;
+}
+}
+// Close mobile menu if open
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+if (mobileMenu && mobileMenu.classList.contains('active')) {
+mobileMenu.classList.remove('active');
+if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
+document.body.style.overflow = '';
+}
+// Also collapse the mobile works submenu if open
+const mobileWorksSubmenu = document.getElementById('mobile-works-submenu');
+if (mobileWorksSubmenu && !mobileWorksSubmenu.classList.contains('hidden')) {
+mobileWorksSubmenu.classList.add('hidden');
+const mobileWorksToggle = document.getElementById('mobile-works-toggle');
+if (mobileWorksToggle) mobileWorksToggle.setAttribute('aria-expanded', 'false');
+}
+}
+});
+});
+
+// Initialize: Show home page by default - run immediately
+// Force home section to stay visible FIRST
+const homeSection = document.getElementById('home');
+if (homeSection) {
+homeSection.classList.remove('hidden');
+homeSection.style.display = 'block';
+homeSection.style.visibility = 'visible';
+homeSection.style.opacity = '1';
+// Remove any inline styles that might hide it
+homeSection.removeAttribute('hidden');
+}
+// Then ensure all sections are properly initialized
+pageSections.forEach(section => {
+if (section.id === 'home') {
+section.classList.remove('hidden');
+section.style.display = 'block';
+section.style.visibility = 'visible';
+section.style.opacity = '1';
+} else {
+section.classList.add('hidden');
+section.style.display = 'none';
+}
+});
+// Update nav links
+navLinks.forEach(link => {
+if (link.getAttribute('data-page') === 'home') {
+link.classList.add('text-primary');
+link.classList.remove('text-[#2B2B2B]');
+} else {
+link.classList.add('text-[#2B2B2B]');
+link.classList.remove('text-primary');
+}
+});
+// Final check - ensure home is visible
+setTimeout(function() {
+const homeCheck = document.getElementById('home');
+if (homeCheck) {
+homeCheck.classList.remove('hidden');
+homeCheck.style.display = 'block';
+homeCheck.style.visibility = 'visible';
+homeCheck.style.opacity = '1';
+}
+}, 100);
+
+// Mobile works submenu toggle
+const mobileWorksToggle = document.getElementById('mobile-works-toggle');
+const mobileWorksSubmenu = document.getElementById('mobile-works-submenu');
+if (mobileWorksToggle && mobileWorksSubmenu) {
+mobileWorksToggle.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+mobileWorksSubmenu.classList.toggle('hidden');
+const expanded = !mobileWorksSubmenu.classList.contains('hidden');
+mobileWorksToggle.setAttribute('aria-expanded', expanded);
+});
+}
+
+// Write to Us form handler
+const writeToUsForm = document.getElementById('write-to-us-form');
+if (writeToUsForm) {
+writeToUsForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(writeToUsForm);
+const name = writeToUsForm.querySelector('input[placeholder="Your name"]').value;
+const email = writeToUsForm.querySelector('input[placeholder="your.email@example.com"]').value;
+const message = writeToUsForm.querySelector('textarea').value;
+alert(`Thank you, ${name}!\n\nWe have received your message and will get back to you soon at ${email}.\n\nBest regards,\nAakkam School of Craft`);
+writeToUsForm.reset();
+});
+}
+
+});
+</script>
+<script id="gallery-interactions">
+document.addEventListener('DOMContentLoaded', function() {
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+const galleryContents = document.querySelectorAll('.gallery-content');
+const pageSections = document.querySelectorAll('.page-section');
+const backButtons = document.querySelectorAll('.back-to-gallery');
+let activeTab = 'workshops';
+
+// Back to gallery button functionality
+backButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+// Show gallery section
+const gallerySection = document.getElementById('gallery');
+if (gallerySection) {
+// Hide all detail sections
+document.querySelectorAll('#workshop-detail, #event-detail, #tour-detail').forEach(section => {
+section.classList.add('hidden');
+section.style.display = 'none';
+});
+// Show gallery section
+gallerySection.classList.remove('hidden');
+gallerySection.style.display = 'block';
+gallerySection.style.visibility = 'visible';
+gallerySection.style.opacity = '1';
+// Update navigation
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+if (link.getAttribute('data-page') === 'gallery') {
+link.classList.add('text-primary');
+link.classList.remove('text-[#2B2B2B]');
+} else {
+link.classList.add('text-[#2B2B2B]');
+link.classList.remove('text-primary');
+}
+});
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+});
+});
+// Event data
+const eventData = {
+};
+// Tour data
+const tourData = {
+'thanjavur-textile-tour': {
+title: 'Thanjavur Heritage Textile Tour',
+description: 'Explore the rich textile and craft heritage of Thanjavur, including temple textiles, bronze work, and traditional painting techniques in the cultural heart of Tamil Nadu.',
+images: [
+'assets/work/textile tour/thanj/1.jpeg',
+'assets/work/textile tour/thanj/THANJAVUR.jpeg'
+]
+}
+};
+
+function renderDetailCollage(images, title) {
+if (!images || images.length === 0) return '';
+return `
+<div class="py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+${images.map((image, index) => {
+const isLarge = index === 0 || index % 4 === 0;
+const rotation = index % 2 === 0 ? 'rotate-1' : '-rotate-1';
+return `
+<div class="${isLarge ? 'md:col-span-2 lg:col-span-2' : ''} group cursor-pointer gallery-image-item" data-image-index="${index}">
+<div class="relative h-full min-h-[300px] ${isLarge ? 'md:min-h-[400px]' : 'md:min-h-[300px]'} rounded-3xl overflow-hidden shadow-xl border-4 border-white transform transition-all duration-500 hover:scale-105 hover:shadow-2xl ${rotation} hover:rotate-0">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+<img src="${image}" alt="${title} - Image ${index + 1}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+<div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+<div class="bg-white/95 backdrop-blur-sm rounded-xl p-3">
+<p class="text-sm font-medium text-[#2B2B2B]">${title}</p>
+<p class="text-xs text-[#2B2B2B]/60">Image ${index + 1} of ${images.length}</p>
+</div>
+</div>
+</div>
+</div>
+`;
+}).join('')}
+</div>
+</div>
+`;
+}
+
+function showGalleryTab(tabId) {
+// Show loading state immediately
+galleryContents.forEach(content => {
+if (content.id === tabId + '-content') {
+content.classList.remove('hidden');
+content.style.opacity = '1';
+} else {
+content.classList.add('hidden');
+}
+});
+galleryTabs.forEach(tab => {
+if (tab.getAttribute('data-tab') === tabId) {
+tab.classList.add('gallery-tab--active');
+tab.classList.remove('gallery-tab--inactive');
+} else {
+tab.classList.remove('gallery-tab--active');
+tab.classList.add('gallery-tab--inactive');
+}
+});
+activeTab = tabId;
+// Preload images for better performance
+if (tabId === 'events' || tabId === 'textile-tours') {
+const samathurCards = document.querySelectorAll('[data-id*="samathur"]');
+samathurCards.forEach(card => {
+const img = card.querySelector('img');
+if (img && !img.complete) {
+const preloadImg = new Image();
+preloadImg.src = img.src;
+}
+});
+}
+}
+function showDetailPage(type, id) {
+const detailSection = document.getElementById(`${type}-detail`);
+const contentDiv = document.getElementById(`${type}-content`);
+let data, content;
+
+// Show loading state immediately
+if (contentDiv) {
+contentDiv.innerHTML = '<div class="flex items-center justify-center py-20"><div class="loading-spinner"></div></div>';
+}
+
+if (type === 'event' && eventData[id]) {
+data = eventData[id];
+// Preload first image for better performance
+if (data.images && data.images.length > 0) {
+const preloadImg = new Image();
+preloadImg.src = data.images[0];
+}
+content = `
+<div class="max-w-7xl mx-auto px-6">
+<div class="relative mb-16">
+<div class="absolute inset-0 bg-gradient-to-br from-[#CC5500]/5 via-transparent to-primary/5 rounded-3xl"></div>
+<div class="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-[#CC5500]/10">
+<div class="text-center mb-8">
+<div class="inline-block mb-4">
+<span class="bg-gradient-to-r from-[#CC5500] to-primary bg-clip-text text-transparent text-sm font-medium tracking-widest uppercase">Experience</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-6 leading-tight">${data.title}</h1>
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#CC5500] to-transparent mx-auto mb-6"></div>
+<p class="text-lg md:text-xl text-[#2B2B2B]/80 max-w-3xl mx-auto leading-relaxed">Experience the vibrant celebration of traditional crafts and cultural heritage through immersive workshops and authentic encounters.</p>
+</div>
+</div>
+</div>
+${renderDetailCollage(data.images, data.title)}
+</div>
+`;
+} else if (type === 'tour' && tourData[id]) {
+data = tourData[id];
+// Preload first image for better performance
+if (data.images && data.images.length > 0) {
+const preloadImg = new Image();
+preloadImg.src = data.images[0];
+}
+content = `
+<div class="max-w-7xl mx-auto px-6">
+<div class="relative mb-16">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-[#CC5500]/5 rounded-3xl"></div>
+<div class="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-primary/10">
+<div class="text-center mb-8">
+<div class="inline-block mb-4">
+<span class="bg-gradient-to-r from-primary to-[#CC5500] bg-clip-text text-transparent text-sm font-medium tracking-widest uppercase">Textile Tour</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] font-semibold text-primary mb-6 leading-tight">${data.title}</h1>
+<div class="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6"></div>
+<p class="text-lg md:text-xl text-[#2B2B2B]/80 max-w-3xl mx-auto leading-relaxed">${data.description}</p>
+</div>
+</div>
+</div>
+${renderDetailCollage(data.images, data.title)}
+</div>
+`;
+} else if (type === 'workshop' && workshopData && workshopData[id]) {
+data = workshopData[id];
+content = `
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-['Playfair_Display'] font-semibold text-[#CC5500] mb-6">${data.title}</h1>
+<p class="text-xl text-[#2B2B2B]/70 max-w-2xl mx-auto leading-relaxed">${data.description || 'Learn traditional craft techniques from master artisans'}</p>
+</div>
+${data.video ? `<div class="mb-12 rounded-2xl overflow-hidden shadow-lg"><iframe width="100%" height="500" src="${data.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : ''}
+${renderDetailCollage(data.images || [], data.title)}
+</div>
+`;
+}
+if (content) {
+contentDiv.innerHTML = content;
+// Hide all page sections
+pageSections.forEach(section => {
+section.classList.add('hidden');
+section.style.display = 'none';
+section.style.visibility = 'hidden';
+section.style.opacity = '0';
+});
+// Show the detail section
+detailSection.classList.remove('hidden');
+detailSection.style.display = 'block';
+detailSection.style.visibility = 'visible';
+detailSection.style.opacity = '1';
+window.scrollTo({ top: 0, behavior: 'smooth' });
+// Make gallery images clickable for lightbox
+setTimeout(function() {
+const galleryImageItems = contentDiv.querySelectorAll('.gallery-image-item');
+if (galleryImageItems.length > 0) {
+const allImages = Array.from(galleryImageItems).map(item => {
+const img = item.querySelector('img');
+return img ? img.src : null;
+}).filter(Boolean);
+galleryImageItems.forEach((item, index) => {
+item.addEventListener('click', function() {
+if (typeof openLightbox === 'function' && allImages.length > 0) {
+openLightbox(allImages, index);
+}
+});
+});
+}
+}, 100);
+}
+}
+const galleryItems = document.querySelectorAll('[data-type][data-id]');
+galleryItems.forEach(item => {
+// Preload images on hover for better performance
+item.addEventListener('mouseenter', function() {
+const type = this.getAttribute('data-type');
+const id = this.getAttribute('data-id');
+if ((type === 'event' && eventData[id]) || (type === 'tour' && tourData[id])) {
+const data = type === 'event' ? eventData[id] : tourData[id];
+if (data.images && data.images.length > 0) {
+// Preload first 2 images
+data.images.slice(0, 2).forEach(imgSrc => {
+const preloadImg = new Image();
+preloadImg.src = imgSrc;
+});
+}
+}
+});
+item.addEventListener('click', function() {
+const type = this.getAttribute('data-type');
+const id = this.getAttribute('data-id');
+
+if ((type === 'event' || type === 'tour' || type === 'workshop') && id) {
+showDetailPage(type, id);
+}
+});
+});
+backButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+// Hide all detail sections
+pageSections.forEach(section => {
+if (section.id === 'workshop-detail' || section.id === 'event-detail' || section.id === 'tour-detail') {
+section.classList.add('hidden');
+section.style.display = 'none';
+section.style.visibility = 'hidden';
+section.style.opacity = '0';
+}
+});
+// Show gallery section
+const gallerySection = document.getElementById('gallery');
+if (gallerySection) {
+gallerySection.classList.remove('hidden');
+gallerySection.style.display = 'block';
+gallerySection.style.visibility = 'visible';
+gallerySection.style.opacity = '1';
+// Update navigation to show gallery as active
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+if (link.getAttribute('data-page') === 'gallery') {
+link.classList.add('text-primary');
+link.classList.remove('text-[#2B2B2B]');
+} else {
+link.classList.add('text-[#2B2B2B]');
+link.classList.remove('text-primary');
+}
+});
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+});
+});
+showGalleryTab(activeTab);
+});
+</script>
+<script id="contact-form-handling">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contact-form');
+// Form removed - script kept for potential future use
+if (!contactForm) return;
+const interestDropdown = document.querySelector('.interest-dropdown');
+const interestOptions = document.querySelector('.interest-options');
+const interestItems = document.querySelectorAll('.interest-option');
+const selectedInterest = document.querySelector('.selected-interest');
+const hiddenInterestInput = document.querySelector('input[name="interest"]');
+const dropdownArrow = document.querySelector('.dropdown-arrow');
+const messageTextarea = document.querySelector('textarea[name="message"]');
+const messageCount = document.querySelector('.message-count');
+if (interestDropdown && interestOptions) {
+interestDropdown.addEventListener('click', function(e) {
+e.preventDefault();
+const isOpen = !interestOptions.classList.contains('hidden');
+if (isOpen) {
+interestOptions.classList.add('hidden');
+dropdownArrow.style.transform = 'rotate(0deg)';
+} else {
+interestOptions.classList.remove('hidden');
+dropdownArrow.style.transform = 'rotate(180deg)';
+}
+});
+interestItems.forEach(item => {
+item.addEventListener('click', function() {
+const value = this.getAttribute('data-value');
+const text = this.textContent;
+selectedInterest.textContent = text;
+hiddenInterestInput.value = value;
+interestOptions.classList.add('hidden');
+dropdownArrow.style.transform = 'rotate(0deg)';
+});
+});
+document.addEventListener('click', function(e) {
+if (!interestDropdown.contains(e.target)) {
+interestOptions.classList.add('hidden');
+dropdownArrow.style.transform = 'rotate(0deg)';
+}
+});
+}
+if (messageTextarea && messageCount) {
+messageTextarea.addEventListener('input', function() {
+const currentLength = this.value.length;
+messageCount.textContent = currentLength;
+if (currentLength > 500) {
+this.value = this.value.substring(0, 500);
+messageCount.textContent = '500';
+}
+});
+}
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(this);
+const data = {};
+for (let [key, value] of formData.entries()) {
+data[key] = value;
+}
+if (!data.interest) {
+showNotification('Please select your area of interest.', 'error');
+return;
+}
+if (data.message.length > 500) {
+showNotification('Message must be 500 characters or less.', 'error');
+return;
+}
+showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
+this.reset();
+selectedInterest.textContent = 'Select your craft interest';
+hiddenInterestInput.value = '';
+messageCount.textContent = '0';
+});
+}
+function showNotification(message, type) {
+const notification = document.createElement('div');
+notification.className = `fixed top-20 right-6 z-50 p-4 rounded-lg shadow-lg max-w-sm transition-all duration-300 ${
+type === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'
+}`;
+notification.innerHTML = `
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-${type === 'success' ? 'check' : 'error-warning'}-line"></i>
+</div>
+<p class="text-sm">${message}</p>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.style.transform = 'translateX(100%)';
+setTimeout(() => notification.remove(), 300);
+}, 4000);
+}
+});
+</script>
+<script id="enhancements">
+document.addEventListener('DOMContentLoaded', function() {
+// Back to top button
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTop.classList.add('visible');
+} else {
+backToTop.classList.remove('visible');
+}
+});
+backToTop.addEventListener('click', function() {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+}
+// Progress bar
+const progressBar = document.getElementById('progress-bar');
+if (progressBar) {
+window.addEventListener('scroll', function() {
+const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const scrolled = (window.pageYOffset / windowHeight) * 100;
+progressBar.style.width = scrolled + '%';
+});
+}
+// Mobile menu
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+function openMobileMenu() {
+mobileMenu.classList.add('active');
+mobileMenuOverlay.classList.add('active');
+document.body.style.overflow = 'hidden';
+if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'true');
+}
+function closeMobileMenu() {
+mobileMenu.classList.remove('active');
+mobileMenuOverlay.classList.remove('active');
+document.body.style.overflow = '';
+if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'false');
+}
+if (mobileMenuToggle) {
+mobileMenuToggle.addEventListener('click', openMobileMenu);
+}
+if (mobileMenuClose) {
+mobileMenuClose.addEventListener('click', closeMobileMenu);
+}
+if (mobileMenuOverlay) {
+mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+}
+mobileNavLinks.forEach(link => {
+link.addEventListener('click', function() {
+closeMobileMenu();
+const pageId = this.getAttribute('data-page');
+if (pageId) {
+// Use the same showPage function from page-navigation script
+// Trigger click on corresponding nav link to use existing navigation
+const desktopNavLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+if (desktopNavLink) {
+desktopNavLink.click();
+} else {
+// Fallback if nav link doesn't exist
+const pageSections = document.querySelectorAll('.page-section');
+const navLinks = document.querySelectorAll('.nav-link');
+pageSections.forEach(section => {
+if (section.id === pageId) {
+section.classList.remove('hidden');
+section.style.display = 'block';
+section.style.visibility = 'visible';
+} else {
+section.classList.add('hidden');
+section.style.display = 'none';
+}
+});
+navLinks.forEach(navLink => {
+if (navLink.getAttribute('data-page') === pageId) {
+navLink.classList.add('text-primary');
+navLink.classList.remove('text-[#2B2B2B]');
+} else {
+navLink.classList.add('text-[#2B2B2B]');
+navLink.classList.remove('text-primary');
+}
+});
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+}
+});
+});
+// Image lightbox
+let lightboxImages = [];
+let currentLightboxIndex = 0;
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+const lightboxCounter = document.getElementById('lightbox-counter');
+function openLightbox(images, index = 0) {
+lightboxImages = images;
+currentLightboxIndex = index;
+updateLightboxImage();
+lightbox.classList.add('active');
+document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+lightbox.classList.remove('active');
+document.body.style.overflow = '';
+}
+function updateLightboxImage() {
+if (lightboxImages.length > 0 && lightboxImage) {
+lightboxImage.src = lightboxImages[currentLightboxIndex];
+lightboxImage.alt = `Image ${currentLightboxIndex + 1} of ${lightboxImages.length}`;
+if (lightboxCounter) {
+lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${lightboxImages.length}`;
+}
+if (lightboxPrev) lightboxPrev.style.display = lightboxImages.length > 1 ? 'flex' : 'none';
+if (lightboxNext) lightboxNext.style.display = lightboxImages.length > 1 ? 'flex' : 'none';
+}
+}
+function showNextImage() {
+if (currentLightboxIndex < lightboxImages.length - 1) {
+currentLightboxIndex++;
+} else {
+currentLightboxIndex = 0;
+}
+updateLightboxImage();
+}
+function showPrevImage() {
+if (currentLightboxIndex > 0) {
+currentLightboxIndex--;
+} else {
+currentLightboxIndex = lightboxImages.length - 1;
+}
+updateLightboxImage();
+}
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
+if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
+if (lightbox) {
+lightbox.addEventListener('click', function(e) {
+if (e.target === lightbox) closeLightbox();
+});
+}
+document.addEventListener('keydown', function(e) {
+if (lightbox.classList.contains('active')) {
+if (e.key === 'Escape') closeLightbox();
+if (e.key === 'ArrowRight') showNextImage();
+if (e.key === 'ArrowLeft') showPrevImage();
+}
+});
+// Make gallery images clickable for lightbox
+function initLightboxForGallery() {
+const galleryImages = document.querySelectorAll('.collage-detail-grid img, .art-collage-card img, [data-type][data-id] img');
+galleryImages.forEach((img, index) => {
+img.style.cursor = 'pointer';
+img.addEventListener('click', function(e) {
+            // Check if we're on a detail page or gallery page
+            const isDetailPage = this.closest('#event-detail, #tour-detail, #workshop-detail');
+const parent = this.closest('[data-type][data-id]');
+            
+            // If we're on a detail page, open lightbox and stop propagation
+            if (isDetailPage) {
+                e.stopPropagation();
+                // ... existing lightbox code ...
+                return;
+            }
+            
+            // If we're on gallery page, let the click bubble to the card handler
+            // Don't stop propagation - let the card's click handler handle navigation
+if (parent) {
+const type = parent.getAttribute('data-type');
+const id = parent.getAttribute('data-id');
+                // Only open lightbox if explicitly requested (e.g., double-click)
+                // For single click, let it bubble to navigate to detail page
+}
+});
+});
+}
+// Scroll-triggered animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const fadeObserver = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+// Parallax effect for hero
+const hero = document.querySelector('.hero-text')?.closest('div[style*="background-image"]');
+if (hero) {
+hero.classList.add('parallax');
+window.addEventListener('scroll', function() {
+const scrolled = window.pageYOffset;
+const rate = scrolled * 0.5;
+if (hero) {
+hero.style.transform = `translateY(${rate}px)`;
+}
+});
+}
+// Form validation
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+const inputs = contactForm.querySelectorAll('input, textarea, select');
+inputs.forEach(input => {
+input.addEventListener('blur', function() {
+validateField(this);
+});
+input.addEventListener('input', function() {
+if (this.classList.contains('error')) {
+validateField(this);
+}
+});
+});
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+let isValid = true;
+inputs.forEach(input => {
+if (!validateField(input)) {
+isValid = false;
+}
+});
+if (isValid) {
+showNotification('Thank you! Your message has been sent successfully.', 'success');
+contactForm.reset();
+} else {
+showNotification('Please correct the errors in the form.', 'error');
+}
+});
+}
+function validateField(field) {
+const value = field.value.trim();
+let isValid = true;
+let errorMessage = '';
+// Remove previous error
+field.classList.remove('error');
+const errorEl = field.parentElement.querySelector('.error-message');
+if (errorEl) errorEl.remove();
+if (field.hasAttribute('required') && !value) {
+isValid = false;
+errorMessage = 'This field is required';
+}
+if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+isValid = false;
+errorMessage = 'Please enter a valid email address';
+}
+if (field.type === 'tel' && value && !/^[\d\s\-\+\(\)]+$/.test(value)) {
+isValid = false;
+errorMessage = 'Please enter a valid phone number';
+}
+if (!isValid) {
+field.classList.add('error');
+const errorDiv = document.createElement('div');
+errorDiv.className = 'error-message text-red-600 text-sm mt-1';
+errorDiv.textContent = errorMessage;
+field.parentElement.appendChild(errorDiv);
+field.style.borderColor = '#ef4444';
+} else {
+field.style.borderColor = '';
+}
+return isValid;
+}
+function showNotification(message, type) {
+const notification = document.createElement('div');
+notification.className = `fixed top-20 right-6 z-50 p-4 rounded-lg shadow-lg max-w-sm transition-all duration-300 ${
+type === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'
+}`;
+notification.innerHTML = `
+<div class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3">
+<i class="ri-${type === 'success' ? 'check' : 'error-warning'}-line"></i>
+</div>
+<p class="text-sm">${message}</p>
+</div>
+`;
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.style.transform = 'translateX(100%)';
+setTimeout(() => notification.remove(), 300);
+}, 4000);
+}
+// Initialize lightbox after gallery loads
+setTimeout(initLightboxForGallery, 1000);
+// Add fade-in class to sections
+document.querySelectorAll('section, article, .art-collage-card').forEach((el, index) => {
+if (!el.classList.contains('fade-in')) {
+el.classList.add('fade-in');
+}
+});
+// Make breadcrumb links functional
+document.addEventListener('click', function(e) {
+if (e.target.closest('nav[aria-label="Breadcrumb"] a[data-page]')) {
+e.preventDefault();
+const pageId = e.target.closest('a').getAttribute('data-page');
+// Use the same showPage function by triggering the nav link click
+const navLink = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+if (navLink) {
+navLink.click();
+} else {
+// Fallback
+const pageSections = document.querySelectorAll('.page-section');
+const navLinks = document.querySelectorAll('.nav-link');
+pageSections.forEach(section => {
+if (section.id === pageId) {
+section.classList.remove('hidden');
+section.style.display = 'block';
+section.style.visibility = 'visible';
+} else {
+section.classList.add('hidden');
+section.style.display = 'none';
+}
+});
+navLinks.forEach(navLink => {
+if (navLink.getAttribute('data-page') === pageId) {
+navLink.classList.add('text-primary');
+navLink.classList.remove('text-[#2B2B2B]');
+} else {
+navLink.classList.add('text-[#2B2B2B]');
+navLink.classList.remove('text-primary');
+}
+});
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+}
+});
+});
+</script>
+</body>
+</html>
+</html>
